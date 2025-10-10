@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utazási Ajánló</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #008CBA;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+        }
+
+        nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav .search-box input {
+            padding: 5px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        nav button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        #results {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            width: 250px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card h3 {
+            margin: 10px 0 5px;
+        }
+
+        .card p {
+            padding: 0 10px 15px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="#home">Főoldal</a>
+            <a href="#about">Rólunk</a>
+            <a href="#contact">Kapcsolat</a>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Keresés...">
+            <button onclick="search()">Keresés</button>
+            <button onclick="resetResults()">Törlés</button>
+        </div>
+    </nav>
+
+    <section id="home">
+        <h1 style="text-align:center; padding: 50px;">Üdvözöl az Utazási Ajánló!</h1>
+        <p style="text-align:center;">Írj be kulcsszót (pl. strand, templom, ország), és fedezd fel a világot!</p>
+    </section>
+
+    <!-- Ajánlási eredmények -->
+    <section id="results"></section>
+
+    <script src="script.js"></script>
+</body>
+</html>
